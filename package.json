@@ -1,0 +1,27 @@
+{
+  "name": "latent-karaoke-visual",
+  "version": "1.0.0",
+  "description": "cclab.visual",
+  "author": "cclab.visual",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.10.3",
+    "js-video-url-parser": "^0.4.1",
+    "nuxt": "^2.0.0",
+    "p5": "^1.0.0",
+    "push-dir": "^0.4.1",
+    "video.js": "^7.7.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2"
+  }
+}
