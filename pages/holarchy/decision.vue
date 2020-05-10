@@ -139,4 +139,56 @@ export default {
 .run a:hover::after {
   transform: scale(1, 1);
 }
+
+@media screen and (max-width: 875px) {
+  .secondTitle {
+    text-align: center;
+    margin-bottom: 62px;
+  }
+
+  .secondTitle p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    letter-spacing: 11px;
+    color: #ffffff;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .secondOrder {
+    position: flex;
+    text-align: center;
+    padding-bottom: 43px;
+  }
+
+  .secondOrder p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .embedYoutube {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin: auto;
+    padding-bottom: 40px;
+  }
+}
 </style>

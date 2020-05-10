@@ -31,7 +31,7 @@ export default {};
   margin-right: auto;
   margin-top: 0px;
   margin-bottom: 0px;
-  width: 900px;
+  width: 100%;
   font-family: neue-haas-grotesk-text, sans-serif;
   font-style: normal;
   font-size: 40px;
@@ -49,7 +49,13 @@ export default {};
 
 .logo img {
   text-align: center;
-  width: 541px;
+  width: 30%;
+}
+@media screen and (max-width: 950px) {
+  .logo img {
+    text-align: center;
+    width: 70%;
+  }
 }
 
 .mail {

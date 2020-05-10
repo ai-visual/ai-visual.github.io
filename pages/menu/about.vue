@@ -17,7 +17,7 @@ export default {};
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+  width: 100%;
   font-family: neue-haas-grotesk-text, sans-serif;
   font-style: normal;
   font-size: 40px;

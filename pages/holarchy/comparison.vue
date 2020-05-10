@@ -61,7 +61,7 @@ export default {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 111px;
-  width: 900px;
+  width: 100%;
   font-family: neue-haas-grotesk-text, sans-serif;
   font-size: 40px;
   font-style: normal;
@@ -147,5 +147,43 @@ video {
 
 .try {
   text-align: center;
+}
+
+@media screen and (max-width: 1665px) {
+  .comparisonVideo {
+    margin: 0 auto;
+  }
+
+  .thumbnail-youtube {
+    width: 100%;
+    height: 80%;
+  }
+
+  .thumbnail-ai {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  .youtube {
+    width: 100%;
+    height: 800%;
+    display: block;
+    margin: auto;
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+  }
+
+  video {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 62px;
+    text-align: center;
+  }
 }
 </style>

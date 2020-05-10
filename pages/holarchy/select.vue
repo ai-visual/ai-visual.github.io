@@ -19,6 +19,7 @@
 
 <script>
 import urlParser from "js-video-url-parser";
+
 export default {
   data() {
     return {
@@ -55,9 +56,11 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/bvf7soa.css");
+
 .title {
   text-align: center;
 }
+
 .title p {
   text-align: center;
   margin-left: auto;
@@ -65,7 +68,7 @@ export default {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 62px;
-  width: 900px;
+  width: 100%;
   font-family: neue-haas-grotesk-text, sans-serif;
   font-style: normal;
   font-size: 40px;
@@ -75,6 +78,7 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
+
 .order p {
   text-align: center;
   margin-left: auto;
@@ -82,7 +86,7 @@ export default {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 278px;
-  width: 900px;
+  width: 100%;
   font-family: neue-haas-grotesk-text, sans-serif;
   font-style: normal;
   font-size: 30px;
@@ -92,17 +96,20 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
+
 .fa-search {
   color: #ffffff;
   font-size: 25px;
   transform: scaleX(-1);
 }
+
 .search {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 379px;
 }
+
 .search input[type="text"] {
   font-family: neue-haas-grotesk-text, sans-serif;
   font-size: 30px;
@@ -118,8 +125,84 @@ export default {
   border-bottom: 2px solid #ffffff;
   background: transparent;
 }
+
 .ef input[type="text"]:focus {
   border-bottom: 2px solid #f3373d;
   outline: none;
+}
+
+@media screen and (max-width: 875px) {
+  .title {
+    text-align: center;
+  }
+
+  .title p {
+    width: 100%;
+    text-align: center;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 11px;
+    color: #ffffff;
+    opacity: 1;
+    margin-top: 18%;
+    padding-bottom: 62px;
+  }
+
+  .order p {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 278px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .fa-search {
+    color: #ffffff;
+    font-size: 25px;
+    transform: scaleX(-1);
+  }
+
+  .search {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 379px;
+  }
+
+  .search input[type="text"] {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 30px;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0em;
+    padding-bottom: 1.5px;
+    padding-left: 2px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #cbcbcb;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+  }
+
+  .ef input[type="text"]:focus {
+    border-bottom: 2px solid #f3373d;
+    outline: none;
+  }
 }
 </style>
