@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { BASE_URL } from '../../const';
+import { BASE_URL } from "../../const";
 export default {
   data() {
     return {
@@ -39,28 +39,31 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start();
-      this.$axios.get(`${BASE_URL}/generate?q=${this.youtubeURL}`)
+      this.$axios
+        .get(`${BASE_URL}/generate?q=${this.youtubeURL}`)
         .then(response => response.data)
         .then(json => {
           this.$router.push({
             path: "comparison",
-            query: { url: this.youtubeURL, video_id: json.video_id},
-          })
-        }).catch(err => {
-          console.error(err);
+            query: { url: this.youtubeURL, video_id: json.video_id }
+          });
+        })
+        .catch(err => {
+          this.$router.push({
+            path: "error",
+            query: { message: "An error occurred during processing." }
+          });
         });
-      });
+    });
     const script = function(p5) {
       let angle = 0.0;
       let scal = 20;
       let speed = 0.08;
       let val = 40;
-
       p5.setup = _ => {
         let canvas = p5.createCanvas(80, 80);
         canvas.parent("p5Canvas");
       };
-
       p5.draw = _ => {
         p5.fill(0, 14);
         p5.rect(10, 0, 100, 100);
@@ -72,7 +75,6 @@ export default {
         angle += speed;
       };
     };
-
     const P5 = require("p5");
     new P5(script);
   }
@@ -81,7 +83,6 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/bvf7soa.css");
-
 .thirdTitle p {
   text-align: center;
   display: block;
@@ -99,13 +100,11 @@ export default {
   color: #ffffff;
   opacity: 1;
 }
-
 .thirdOrder {
   position: flex;
   text-align: center;
   padding-bottom: 61px;
 }
-
 .thirdOrder p {
   margin-left: auto;
   margin-right: auto;
@@ -120,7 +119,6 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .justify-content-center {
   margin-left: auto;
   margin-right: auto;

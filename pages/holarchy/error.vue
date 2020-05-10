@@ -4,7 +4,7 @@
       <p>holarchy</p>
     </div>
     <div class="message">
-      <p>Not Found Youtube link.</p>
+      <p>{{ this.message }}</p>
     </div>
     <div class="tryAgain">
       <router-link to="/holarchy/select">Try again.</router-link>
@@ -14,26 +14,14 @@
 
 <script>
 import urlParser from "js-video-url-parser";
-
 export default {
   data() {
     return {
-      thumbnailURL: ""
+      message: ""
     };
   },
   created() {
-    const url = this.$route.query.url;
-    console.log(url);
-    const parsedData = urlParser.parse(url);
-    if (!parsedData) {
-      console.log("正しいURLではありません");
-    } else {
-      console.log(parsedData.id);
-      // https://i1.ytimg.com/vi/VIDEO ID/hqdefault.jpg
-      this.thumbnailURL =
-        "https://www.youtube.com/embed/" + parsedData.id + "?color=white";
-    }
-    return this.thumbnailURL;
+    this.message = this.$route.query.message;
   },
   methods: {
     getId() {
@@ -45,12 +33,10 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/bvf7soa.css");
-
 .noGood {
   text-align: center;
   padding-bottom: 111px;
 }
-
 .noGood p {
   text-align: center;
   margin-left: auto;
@@ -66,13 +52,11 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .message {
   position: flex;
   text-align: center;
   padding-bottom: 278px;
 }
-
 .message p {
   margin-left: auto;
   margin-right: auto;
@@ -87,12 +71,10 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .tryAgain {
   text-align: center;
   margin-bottom: 379px;
 }
-
 .tryAgain a {
   text-align: center;
   font-family: neue-haas-grotesk-text, sans-serif;
@@ -106,7 +88,6 @@ export default {
   color: #ffffff;
   opacity: 1;
 }
-
 .tryAgain a::after {
   position: absolute;
   bottom: -4px;
@@ -119,7 +100,6 @@ export default {
   transform-origin: left top;
   transition: transform 0.3s;
 }
-
 .tryAgain a:hover::after {
   transform: scale(1, 1);
 }

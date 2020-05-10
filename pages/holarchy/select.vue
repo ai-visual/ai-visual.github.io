@@ -19,7 +19,6 @@
 
 <script>
 import urlParser from "js-video-url-parser";
-
 export default {
   data() {
     return {
@@ -33,12 +32,14 @@ export default {
       const parsedData = urlParser.parse(url);
       if (!parsedData) {
         this.$router.push({
-          path: "404"
+          path: "error",
+          query: { message: "Not Found Youtube link." }
         });
       }
       if (parsedData.provider != "youtube") {
         this.$router.push({
-          path: "404"
+          path: "error",
+          query: { message: "Not Found Youtube link." }
         });
       } else {
         console.log(parsedData.id);
@@ -54,11 +55,9 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/bvf7soa.css");
-
 .title {
   text-align: center;
 }
-
 .title p {
   text-align: center;
   margin-left: auto;
@@ -76,7 +75,6 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .order p {
   text-align: center;
   margin-left: auto;
@@ -94,20 +92,17 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .fa-search {
   color: #ffffff;
   font-size: 25px;
   transform: scaleX(-1);
 }
-
 .search {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 379px;
 }
-
 .search input[type="text"] {
   font-family: neue-haas-grotesk-text, sans-serif;
   font-size: 30px;
@@ -123,7 +118,6 @@ export default {
   border-bottom: 2px solid #ffffff;
   background: transparent;
 }
-
 .ef input[type="text"]:focus {
   border-bottom: 2px solid #f3373d;
   outline: none;
