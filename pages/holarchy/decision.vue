@@ -25,7 +25,6 @@
 
 <script>
 import urlParser from "js-video-url-parser";
-
 export default {
   data() {
     return {
@@ -36,13 +35,14 @@ export default {
     const url = this.$route.query.url;
     const parsedData = urlParser.parse(url);
     if (!parsedData) {
-      console.log("正しいURLではありません");
-    } else {
-      console.log(parsedData.id);
-      // https://i1.ytimg.com/vi/VIDEO ID/hqdefault.jpg
-      this.thumbnailURL =
-        "https://www.youtube.com/embed/" + parsedData.id + "?color=white";
+      this.$router.push({
+        path: "error",
+        query: { message: "Not Found Youtube link." }
+      });
     }
+    let videoID = parsedData.id;
+    this.thumbnailURL =
+      "https://www.youtube.com/embed/" + videoID + "?color=white";
     return this.thumbnailURL;
   },
   methods: {
@@ -55,12 +55,10 @@ export default {
 
 <style>
 @import url("https://use.typekit.net/bvf7soa.css");
-
 .secondTitle {
   text-align: center;
   margin-bottom: 62px;
 }
-
 .secondTitle p {
   text-align: center;
   margin-left: auto;
@@ -76,13 +74,11 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .secondOrder {
   position: flex;
   text-align: center;
   padding-bottom: 43px;
 }
-
 .secondOrder p {
   margin-left: auto;
   margin-right: auto;
@@ -97,18 +93,15 @@ export default {
   opacity: 1;
   text-decoration: none;
 }
-
 .embedYoutube {
   display: block;
   margin: auto;
   padding-bottom: 40px;
 }
-
 .run {
   text-align: center;
   padding-bottom: 81px;
 }
-
 .run a {
   text-align: center;
   font-family: neue-haas-grotesk-text, sans-serif;
@@ -122,7 +115,6 @@ export default {
   color: #ffffff;
   opacity: 1;
 }
-
 .run a::after {
   position: absolute;
   bottom: -4px;
@@ -135,17 +127,14 @@ export default {
   transform-origin: left top;
   transition: transform 0.3s;
 }
-
 .run a:hover::after {
   transform: scale(1, 1);
 }
-
 @media screen and (max-width: 875px) {
   .secondTitle {
     text-align: center;
     margin-bottom: 62px;
   }
-
   .secondTitle p {
     text-align: center;
     margin-left: auto;
@@ -161,13 +150,11 @@ export default {
     opacity: 1;
     text-decoration: none;
   }
-
   .secondOrder {
     position: flex;
     text-align: center;
     padding-bottom: 43px;
   }
-
   .secondOrder p {
     margin-left: auto;
     margin-right: auto;
@@ -182,7 +169,6 @@ export default {
     opacity: 1;
     text-decoration: none;
   }
-
   .embedYoutube {
     width: 100%;
     height: 80%;

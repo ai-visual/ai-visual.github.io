@@ -1,1 +1,1 @@
-export const BASE_URL = "http://18.177.153.209";
+export const BASE_URL = "https://holarchy.yamad07.world";
