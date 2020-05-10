@@ -29,6 +29,7 @@
 
 <script>
 import { BASE_URL } from "../../const";
+import settings from "../../middleware/axios";
 
 export default {
   data() {
