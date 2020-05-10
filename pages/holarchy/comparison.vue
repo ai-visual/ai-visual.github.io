@@ -150,31 +150,56 @@ video {
 }
 
 @media screen and (max-width: 1665px) {
-  .comparisonVideo {
-    margin: 0 auto;
-  }
-
   .thumbnail-youtube {
+    text-align: center;
     width: 100%;
-    height: 80%;
+    height: 100%;
+    display: block;
+    margin: auto;
   }
 
   .thumbnail-ai {
     width: 100%;
-    height: 80%;
+    height: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .youtube {
+    display: block;
+    margin: auto;
+    padding-bottom: 40px;
+    padding-left: 0px;
+  }
+
+  video {
+    display: block;
+    margin: auto;
+    margin-bottom: 62px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .thumbnail-youtube {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .thumbnail-ai {
+    width: 100%;
+    height: 100%;
     display: block;
     margin: auto;
   }
 
   .youtube {
     width: 100%;
-    height: 800%;
+    height: 80%;
     display: block;
     margin: auto;
-    display: block;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 40px;
   }
 
   video {
@@ -183,7 +208,6 @@ video {
     display: block;
     margin: auto;
     margin-bottom: 62px;
-    text-align: center;
   }
 }
 </style>
