@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <p>
-      This project is created by AI-visual team from
+      AI-visual at
       <a href="https://cclab.sfc.keio.ac.jp/">cc-lab</a>
     </p>
   </footer>

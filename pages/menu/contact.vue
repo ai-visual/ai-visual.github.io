@@ -9,7 +9,7 @@
       </a>
     </div>
     <div class="mail">
-      <a href="mailto:sfc.cclab&#64;gmail.com">sfc.cclab&#64;gmail.com</a>
+      <a href="mailto:sfc.cclab@gmail.com">sfc.cclab&#64;gmail.com</a>
     </div>
   </div>
 </template>
